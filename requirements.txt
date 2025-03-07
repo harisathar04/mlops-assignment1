@@ -1,0 +1,4 @@
+flask
+nltk
+pytest
+flake8
