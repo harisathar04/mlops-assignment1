@@ -3,7 +3,7 @@ from app.main import app
 
 
 class SentimentTestCase(unittest.TestCase):
-    
+
     def setUp(self):
         self.app = app.test_client()
         self.app.testing = True
