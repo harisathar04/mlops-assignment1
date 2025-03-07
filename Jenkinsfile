@@ -5,9 +5,11 @@ pipeline {
         
         stage('Clone Repository') {
     steps {
-         url: 'https://github.com/harisathar04/mlops-assignment1.git', branch: 'dev-testing'
+        git branch: 'dev-testing', 
+            url: 'https://github.com/harisathar04/mlops-assignment1.git'
     }
 }
+
 
         stage('Build Docker Image') {
             steps {
