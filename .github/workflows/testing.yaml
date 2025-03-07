@@ -1,8 +1,11 @@
 name: Run Tests
 on:
-  pull_request:
-    branches:
-      - test
+    pull_request:
+        branches:
+            - test
+    push:
+        branches:
+            - test
 
 jobs:
   test:
