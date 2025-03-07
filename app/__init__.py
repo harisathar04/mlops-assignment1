@@ -2,4 +2,4 @@ from flask import Flask
 
 app = Flask(__name__)
 
-import app.main  # noqa: F401,E402
+from app import main  # Import routes after app creation
