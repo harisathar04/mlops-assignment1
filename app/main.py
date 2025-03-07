@@ -11,4 +11,3 @@ def predict():
 
     sentiment = analyze_sentiment(data["text"])
     return jsonify({"sentiment": sentiment})
-def test():print("Flake8 should catch this")
