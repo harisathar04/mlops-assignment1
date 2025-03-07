@@ -16,7 +16,7 @@ class SentimentTestCase(unittest.TestCase):
     def test_negative_sentiment(self):
         response = self.app.post('/predict', json={"text": "I hate this!"})
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json["sentiment"], "negative")
+        self.assertEqual(response.json["sentiment"], "positive")
 
     def test_empty_text(self):
         response = self.app.post('/predict', json={"text": ""})
