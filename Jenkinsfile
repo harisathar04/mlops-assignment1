@@ -30,9 +30,18 @@ pipeline {
             }
         }
 
-        stage('Notify Admin') {
-            steps {
-                mail bcc: '56riyaan@gmail.com', body: 'Deployment Successful', from: 'jenkins@example.com', subject: 'Deployment Complete', to: 'harisathar04@gmail.com'
+        post {
+            success {
+                script {
+                    echo "Sending email to harisathar04@gmail.com..."
+                    emailext(
+                        subject: 'Build Success',
+                        body: 'The Jenkins build was successful!',
+                        to: 'harisathar04@gmail.com',
+                        debug: true
+                    )
+                    echo "Email sent successfully."
+                }
             }
         }
     }
